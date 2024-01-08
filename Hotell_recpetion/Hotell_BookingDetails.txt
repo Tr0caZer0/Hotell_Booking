@@ -1,0 +1,6 @@
+Single-Bedroom, 2024-02-02/2024-02-03, Oona, Ilona, O9I
+Single-Bedroom, 2024-02-02/2024-02-03, Kenta, Knut, K9K
+Single-Bedroom, 2024-02-03/2024-02-04, Test, MedTest, T11M
+Single-Bedroom, 2024-02-02/2024-02-05, Tanka, Tank, T9T
+Double-Bedroom, 2024-02-05/2024-03-02, Boka, Mera, B8M
+Single-Bedroom, 2024-02-03/2024-02-04, Test, MedFest, T11M
