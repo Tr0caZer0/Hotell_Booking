@@ -246,9 +246,9 @@ public class HotellLogic{
 	}// End checkAvailableRooms method. 
 	
 	//Method checks that the dates don't overlap. 
-	private boolean ifTrue(String vistDate, String leaveDate) {
-		if(!(formatDate(leaveDate.trim()).isBefore(room.getVisitDate()) || 
-				formatDate(vistDate.trim()).isBefore(room.getLeaveDate()))){
+	private boolean ifTrue(String visitDate, String leaveDate) {
+		if((room.getVisitDate().isBefore(formatDate(leaveDate.trim())) && room.getLeaveDate().isAfter(formatDate(leaveDate.trim())))
+			 || (room.getLeaveDate().isAfter(formatDate(visitDate.trim())) && room.getVisitDate().isBefore(formatDate(visitDate.trim())))){
 			return true;
 		}
 		
@@ -261,7 +261,7 @@ public class HotellLogic{
 		
 		String returnRemovedBooking = null;
 		
-		try(BufferedReader toReadData = new BufferedReader(new FileReader("Hotell_BookingDetails.txt"));){
+		try(BufferedReader toReadData = new BufferedReader(new FileReader(fedDoc));){
 			
 			String details;
 			

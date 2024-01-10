@@ -1,7 +1,6 @@
 package hotell;
 
 public class Customer{
-	
 	protected String firstName;
 	protected String surname;
 	protected String bookingNumber;

@@ -63,7 +63,7 @@ public class Main {
 		System.out.print("Enter booking number: ");
 		String bookingNumber = logic.userStringInput();
 		System.out.println("");
-		String userBookingDetails = logic.checkBookingNumber(bookingNumber, 1, null);
+		String userBookingDetails = logic.checkBookingNumber(bookingNumber, 1, "Hotell_BookingDetails.txt");
 		if(userBookingDetails != null) {
 			System.out.println("The follwoing booking could be found ");
 			System.out.println(userBookingDetails + "\n");
@@ -97,8 +97,8 @@ public class Main {
 		int menuSelection = 0;
 		
 		while(true) {
-			System.out.printf("%s%n%s%n%s%n%s%n%s%n%s%n", "1. Boka rum", "2. Hämta bokningslista", "3. Sök bokning", 
-			           "4. Avboka bokning", "5. Sök tillgängliga rum", "0. Avsluta");
+			System.out.printf("%s%n%s%n%s%n%s%n%s%n%s%n", "1. Book room", "2. Get booking list", "3. Search booking", 
+			           "4. Cancel booking", "5. Search available room", "0. Quit");
 				
 				String command = logic.userStringInput();
 			try {
