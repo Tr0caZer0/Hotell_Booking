@@ -246,7 +246,7 @@ public class HotellLogic{
 	}// End checkAvailableRooms method. 
 	
 	//Method checks that the dates don't overlap. 
-	private boolean ifTrue(String visitDate, String leaveDate) {
+	public boolean ifTrue(String visitDate, String leaveDate) {
 		if((room.getVisitDate().isBefore(formatDate(leaveDate.trim())) && room.getLeaveDate().isAfter(formatDate(leaveDate.trim())))
 			 || (room.getLeaveDate().isAfter(formatDate(visitDate.trim())) && room.getVisitDate().isBefore(formatDate(visitDate.trim())))){
 			return true;

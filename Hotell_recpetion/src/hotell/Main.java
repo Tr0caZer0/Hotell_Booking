@@ -1,14 +1,15 @@
 package hotell;
 
-import java.util.Scanner;
-
 public class Main {
 	
-	public static Scanner userInput = new Scanner(System.in);
-	public static HotellLogic logic = new HotellLogic();
-	
 	public static void main(String[] args) {
+		Main mainMenu = new Main();
+		mainMenu.selectOption();
 		
+	}// End main method 
+	
+	public void selectOption() {
+		HotellLogic logic = new HotellLogic();
 		while(true) {
 			switch(userMenu()) {
 			
@@ -39,10 +40,11 @@ public class Main {
 			
 			}
 		}
-	}// End main method 
+	}
 
 
 	private static void roomBooking() {
+		HotellLogic logic = new HotellLogic();
 		
 		logic.addDate();
 		
@@ -54,11 +56,13 @@ public class Main {
 		}
 	}// End roomBooking method.
 	
-	private static void getBookingDetails() {
+	private void getBookingDetails() {
+		HotellLogic logic = new HotellLogic();
 		logic.readBookingDetails("Hotell_BookingDetails.txt");
 	}// End getBookingDetails method. 
 
-	private static void searchBooking() {
+	private void searchBooking() {
+		HotellLogic logic = new HotellLogic();
 		System.out.println("Which booking are you looking for?");
 		System.out.print("Enter booking number: ");
 		String bookingNumber = logic.userStringInput();
@@ -73,7 +77,8 @@ public class Main {
 			
 	}//End searchBooking method
 	
-	private static void cancleBooking() {
+	private void cancleBooking() {
+		HotellLogic logic = new HotellLogic();
 		System.out.println("Which booking would you like to cancel?");
 		System.out.print("Enter booking number: ");
 		String bookingNumber = logic.userStringInput();
@@ -93,9 +98,9 @@ public class Main {
 		
 	}//End cancleBooking method. 
 
-	public static int userMenu() {
+	public int userMenu() {
 		int menuSelection = 0;
-		
+		HotellLogic logic = new HotellLogic();
 		while(true) {
 			System.out.printf("%s%n%s%n%s%n%s%n%s%n%s%n", "1. Book room", "2. Get booking list", "3. Search booking", 
 			           "4. Cancel booking", "5. Search available room", "0. Quit");
